@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { createClient } from "@supabase/supabase-js";
-import { Menu, X, Phone, MapPin, Clock, ArrowRight, HeartHandshake, BookOpen, Users, Sparkles, MessageCircle, ChevronDown, LogOut, Save, Plus, Trash2, Lock, RefreshCw } from "lucide-react";
+import { Menu, X, Phone, MapPin, Clock, ArrowRight, HeartHandshake, BookOpen, Users, Sparkles, ChevronDown, LogOut, Save, Plus, Trash2, Lock, RefreshCw } from "lucide-react";
 import "./style.css";
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || "";
@@ -154,7 +154,6 @@ function App() {
       <section className="section about-section" id="about"><div className="section-label">A PARTNER FOR YOUR FAMILY</div><div className="section-heading"><h2>Every child has their own way of learning.</h2><p>{content.about}</p></div><div className="credential-card"><div className="credential-icon"><BookOpen/></div><div><span className="eyebrow">EDUCATIONAL QUALIFICATIONS</span><h3>{content.experience || "15 years of experience"}</h3><p>{content.qualifications}</p></div></div></section>
     </main>
     <footer className="footer"><img src="/privika-logo.png" alt="Privika logo"/><p>{content.tagline}</p><span>Information on this website is general and does not replace individualized professional assessment or advice.</span><button className="footer-admin" onClick={goAdmin}>Admin</button><small>© {new Date().getFullYear()} {content.name}. All rights reserved.</small></footer>
-    <a className="floating-whatsapp" href={whatsapp} target="_blank" rel="noreferrer" aria-label="Contact on WhatsApp"><MessageCircle/></a>
   </div>;
 }
 createRoot(document.getElementById("root")).render(<App/>);
